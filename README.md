@@ -8,7 +8,7 @@
 ### Installing Dependencies
 - open project in command prompt or terminal
   ```cmd 
-  mvn install`
+  mvn install
   ```
 
 ### Errors
