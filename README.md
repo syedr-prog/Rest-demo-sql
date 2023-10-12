@@ -7,7 +7,9 @@
 
 ### Installing Dependencies
 - open project in command prompt or terminal
-  - ```cmd `mvn install`
+  ```cmd 
+  mvn install`
+  ```
 
 ### Errors
 - There will be a datasource error
