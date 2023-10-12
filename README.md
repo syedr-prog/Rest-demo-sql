@@ -1,4 +1,4 @@
-# Restful api with SQL
+# Springboot Restful api with SQL
 ## Configurations
 ### Dependencies
 - Update all dependencies in pom.xml
@@ -12,8 +12,8 @@
 ### Errors
 - There will be a datasource error
   - ![img_1.png](img_1.png)
-  - You could resolve it by adding database information in resources/application.properties file or adding a application.yaml file.
   - Jdbc is how connection is established.
+  - You could resolve it by adding database information in resources/application.properties file or adding a application.yaml file.
     ```yaml
     spring: 
     datasource:
