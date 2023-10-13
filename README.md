@@ -15,7 +15,7 @@
 - There will be a datasource error
   - ![img_1.png](img_1.png)
   - Jdbc is how connection is established.
-  - You could resolve it by adding database information in resources/application.properties file or adding a application.yaml file.
+  - You could resolve it by adding database information in resources/application.properties file or adding a application.yaml file. Name the database cloud_vendor
     ```yaml
     spring: 
       datasource:
