@@ -18,10 +18,10 @@
   - You could resolve it by adding database information in resources/application.properties file or adding a application.yaml file.
     ```yaml
     spring: 
-    datasource:
-    url: jdbc:mysql://localhost:3306/cloud_vendor?useSSL=false 
-    username: 
-    password:
+      datasource:
+        url: jdbc:mysql://localhost:3306/cloud_vendor?useSSL=false 
+        username: 
+        password:
     
     #JPA Settings
     jpa.hibernate.ddl_auto: create
