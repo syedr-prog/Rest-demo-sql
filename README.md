@@ -26,6 +26,3 @@
     #JPA Settings
     jpa.hibernate.ddl_auto: create
     ```
-    
-
-

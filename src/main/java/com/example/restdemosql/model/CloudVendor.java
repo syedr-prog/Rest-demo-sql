@@ -1,18 +1,24 @@
 package com.example.restdemosql.model;
 
-public class CloudVendor {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name="cloud_vendor_info")
+public class CloudVendor {
+    @Id
     private String vendorId;
     private String name;
     private String Address;
     private String phoneNumber;
 
-    public CloudVendor(String vendorId, String name, String address, String phoneNumber) {
-        this.vendorId = vendorId;
-        this.name = name;
-        Address = address;
-        this.phoneNumber = phoneNumber;
-    }
+//    public CloudVendor(String vendorId, String name, String address, String phoneNumber) {
+//        this.vendorId = vendorId;
+//        this.namDe = name;
+//        Address = address;
+//        this.phoneNumber = phoneNumber;
+//    }
 
 
     public String getVendorId() {
