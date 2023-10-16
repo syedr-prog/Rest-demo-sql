@@ -7,7 +7,7 @@ show tables;
 DROP TABLE cloud_vendor_info;
 
 CREATE TABLE cloud_vendor_info (
-    vendor_id int,
+    vendor_id varchar(255),
     vendor_address varchar(255),
     vendor_name varchar(255),
     vendor_phone_number varchar(255)
