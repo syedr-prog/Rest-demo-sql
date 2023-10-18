@@ -20,8 +20,6 @@ public class CloudVendorController {
     //Read Specific Cloud Vendor Details
     @GetMapping("{vendorId}")
     public CloudVendor getCloudVendorDetails(@PathVariable("vendorId") String vendorId){
-//        return new CloudVendor("C1", "Vendor 1", "Address One", "xxxx");
-//        return cloudVendor;
         return cloudVendorService.getCloudVendor(vendorId);
     }
 
