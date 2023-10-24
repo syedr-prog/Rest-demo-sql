@@ -1,10 +1,15 @@
 package com.example.restdemosql.comtroller;
 
 import com.example.restdemosql.model.CloudVendor;
+import com.example.restdemosql.reponse.ResponseHandler;
 import com.example.restdemosql.service.CloudVendorService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+import static org.springframework.http.HttpStatus.OK;
 
 @RestController
 @RequestMapping("/cloudvendor")
@@ -19,8 +24,10 @@ public class CloudVendorController {
 
     //Read Specific Cloud Vendor Details
     @GetMapping("{vendorId}")
-    public CloudVendor getCloudVendorDetails(@PathVariable("vendorId") String vendorId){
-        return cloudVendorService.getCloudVendor(vendorId);
+    public ResponseEntity<Object> getCloudVendorDetails(@PathVariable("vendorId") String vendorId){
+        return ResponseHandler.responseBuilder("Requested Vendor Details are given here",
+                HttpStatus.OK, cloudVendorService.getCloudVendor(vendorId));
+//        return cloudVendorService.getCloudVendor(vendorId);
     }
 
     // Read All Cloud Vendor Details
