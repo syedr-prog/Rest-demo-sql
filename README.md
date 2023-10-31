@@ -26,3 +26,6 @@
     #JPA Settings
     jpa.hibernate.ddl_auto: create
     ```
+    - Not having a bean for openapi will also result in error
+    - ![img_2.png](img_2.png)
+    - to solve this add bean in the spring start page
