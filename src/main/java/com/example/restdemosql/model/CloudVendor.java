@@ -9,17 +9,19 @@ import jakarta.persistence.Table;
 public class CloudVendor {
     @Id
     private String vendorId;
-    private String name;
-    private String Address;
-    private String phoneNumber;
+    private String vendorName;
+    private String vendorAddress;
+    private String vendorPhoneNumber;
 
-//    public CloudVendor(String vendorId, String name, String address, String phoneNumber) {
-//        this.vendorId = vendorId;
-//        this.namDe = name;
-//        Address = address;
-//        this.phoneNumber = phoneNumber;
-//    }
+    public CloudVendor() {
+    }
 
+    public CloudVendor(String vendorId, String vendorName, String vendorAddress, String vendorPhoneNumber) {
+        this.vendorId = vendorId;
+        this.vendorName = vendorName;
+        this.vendorAddress = vendorAddress;
+        this.vendorPhoneNumber = vendorPhoneNumber;
+    }
 
     public String getVendorId() {
         return vendorId;
@@ -29,29 +31,27 @@ public class CloudVendor {
         this.vendorId = vendorId;
     }
 
-    public String getName() {
-        return name;
+    public String getVendorName() {
+        return vendorName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setVendorName(String vendorName) {
+        this.vendorName = vendorName;
     }
 
-    public String getAddress() {
-        return Address;
+    public String getVendorAddress() {
+        return vendorAddress;
     }
 
-    public void setAddress(String address) {
-        Address = address;
+    public void setVendorAddress(String vendorAddress) {
+        this.vendorAddress = vendorAddress;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getVendorPhoneNumber() {
+        return vendorPhoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setVendorPhoneNumber(String vendorPhoneNumber) {
+        this.vendorPhoneNumber = vendorPhoneNumber;
     }
-
-
 }

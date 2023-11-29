@@ -1,5 +1,7 @@
 show databases;
 
+CREATE DATABASE cloud_vendor;
+
 use cloud_vendor;
 
 show tables;
