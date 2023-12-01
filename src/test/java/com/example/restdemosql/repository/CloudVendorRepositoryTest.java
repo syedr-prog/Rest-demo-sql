@@ -24,15 +24,30 @@ public class CloudVendorRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        cloudVendor = new CloudVendor("1", "Amazon", "USA", "xxxxx");
+        cloudVendor = new CloudVendor("1", "Amazon",
+                "USA", "xxxxx");// this is what we will compare our database answer to
         cloudVendorRepository.save(cloudVendor);
     }
 
     @AfterEach
     void tearDown() {
-
+        cloudVendor = null;
+        cloudVendorRepository.deleteAll();
     }
+    //Test case Succes
 
+    @Test
+    void testFindByVendorName_Found(){
+        List<CloudVendor> cloudVendorList = cloudVendorRepository.findByVendorName("Amazon");
+        assertThat(cloudVendorList.get(0).getVendorId()).isEqualTo(cloudVendor.getVendorId());
+        assertThat(cloudVendorList.get(0).getVendorAddress())
+                .isEqualTo(cloudVendor.getVendorAddress());
+    }
         
     //Test case Failure
+    @Test
+    void testFindByVendorName_NotFound(){
+        List<CloudVendor> cloudVendorList = cloudVendorRepository.findByVendorName("GCP");
+        assertThat(cloudVendorList.isEmpty()).isFalse();
+    }
 }

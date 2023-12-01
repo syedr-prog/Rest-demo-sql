@@ -29,3 +29,6 @@
     - Not having a bean for openapi will also result in error
     - ![img_2.png](img_2.png)
     - to solve this add bean in the spring start page
+
+### Testing
+- Run the spring application first before running tests
