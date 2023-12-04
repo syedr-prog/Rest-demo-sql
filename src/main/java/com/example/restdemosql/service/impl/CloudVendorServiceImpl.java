@@ -5,6 +5,7 @@ import com.example.restdemosql.model.CloudVendor;
 import com.example.restdemosql.repository.CloudVendorRepository;
 import com.example.restdemosql.service.CloudVendorService;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 @Service
@@ -39,6 +40,11 @@ public class CloudVendorServiceImpl implements CloudVendorService {
             throw new CloudVendorNotFoundException("Requested Cloud Vendor does not exist");
         }
         return cloudVendorRepository.findById(cloudVendorId).get();
+    }
+
+    @Override
+    public List<CloudVendor> getByVendorName(String vendorName){
+        return cloudVendorRepository.findByVendorName(vendorName);
     }
 
     @Override
