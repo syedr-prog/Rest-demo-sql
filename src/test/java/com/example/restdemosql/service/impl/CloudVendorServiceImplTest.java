@@ -103,11 +103,9 @@ class CloudVendorServiceImplTest {
     void testDeleteCloudVendor() {
         mock(CloudVendor.class);
         mock(CloudVendorRepository.class, Mockito.CALLS_REAL_METHODS);
-        //we have to void methods in special way by incorporating service and repository layer
-        doAnswer(Answers.CALLS_REAL_METHODS).when(
-                cloudVendorRepository).deleteById(any());
+
+        doAnswer(Answers.CALLS_REAL_METHODS).when(cloudVendorRepository)
+                .deleteById(any());
         assertThat(cloudVendorService.deleteCloudVendor("1")).isEqualTo("Success");
-
-
     }
 }
